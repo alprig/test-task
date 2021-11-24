@@ -17,50 +17,54 @@ const LoginForm: FC = () => {
     }
     const router = useHistory();
     return (
-        <Form
-            onFinish={submit}
-            layout="vertical"
-            className="form-wrapper"
-        >
-            {error &&<div style={{color: 'red' }}>
-                {error}
-            </div>}
-            <Form.Item
-                label="Email"
-                name="username"
+        <div>
+            <h1 className="h1">Login</h1>
+            <Form
+                onFinish={submit}
+                layout="vertical"
+                className="form-wrapper"
+            >
+                {error &&<div style={{color: 'red' }}>
+                    {error}
+                </div>}
+                <Form.Item
+                    label="Email"
+                    name="username"
 
-                rules={[rules.required('Please input your Email!') ]}
-            >
-                <Input
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                />
-            </Form.Item>
-            <Form.Item
-                label="Password"
-                name="password"
-                rules={[rules.required('Please input your Password!') ]}
-            >
-                <Input
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    type={"password"}
-                />
-            </Form.Item>
-            <Form.Item>
-                <div className="buttons-wrapper">
-                    <Button
-                        onClick={()=> router.push(RouteNames.SIGNUP)}
-                        type="primary"
-                    >
-                        Sign up
-                    </Button>
-                    <Button type="primary" htmlType="submit" loading={isLoading}>
-                        Login
-                    </Button>
-                </div>
-            </Form.Item>
-        </Form>
+                    rules={[rules.required('Please input your Email!') ]}
+                >
+                    <Input
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                    />
+                </Form.Item>
+                <Form.Item
+                    label="Password"
+                    name="password"
+                    rules={[rules.required('Please input your Password!') ]}
+                >
+                    <Input
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        type={"password"}
+                    />
+                </Form.Item>
+                <Form.Item>
+                    <div className="buttons-wrapper">
+                        <Button
+                            onClick={()=> router.push(RouteNames.SIGNUP)}
+                            type="primary"
+                        >
+                            Sign up
+                        </Button>
+                        <Button type="primary" htmlType="submit" loading={isLoading}>
+                            Login
+                        </Button>
+                    </div>
+                </Form.Item>
+            </Form>
+        </div>
+
     );
 };
 

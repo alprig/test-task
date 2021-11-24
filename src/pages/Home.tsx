@@ -6,13 +6,13 @@ import {LineOptions} from '@antv/g2plot';
 const Home: FC = () => {
     const data = [
         {year: '1991', value: 3},
-        {year: '1992', value: 4},
+        {year: '1992', value: 6},
         {year: '1993', value: 3.5},
         {year: '1994', value: 5},
-        {year: '1995', value: 4.9},
+        {year: '1995', value: 11},
         {year: '1996', value: 6},
         {year: '1997', value: 7},
-        {year: '1998', value: 9},
+        {year: '1998', value: 5},
         {year: '1999', value: 13},
     ];
 
@@ -40,8 +40,11 @@ const Home: FC = () => {
 
 
     return (
-        <div className="chart_wrapper h100">
+        <div className="home-wrapper h100">
             <div>
+                <h1>Chart</h1>
+            </div>
+            <div className="chart_wrapper">
                 <Line {...config} onReady={(chartInstance) => (chart = chartInstance)} />
             </div>
             <div className="circle"></div>

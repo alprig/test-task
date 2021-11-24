@@ -39,6 +39,7 @@ const SignUpForm = () => {
 
     return (
         <div className="form-wrapper">
+            <h1 className="h1">Registration Form</h1>
             <Form
                 layout="vertical"
                 name="register"

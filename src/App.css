@@ -22,6 +22,18 @@ header {
 .form-wrapper {
     min-width: 400px;
 }
+.h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.home-wrapper h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
 .circle {
     background: green;
     border-radius: 100%;
