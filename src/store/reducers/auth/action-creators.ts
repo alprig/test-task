@@ -35,6 +35,7 @@ export const AuthActionCreators = {
         localStorage.removeItem('username')
         dispatch(AuthActionCreators.setUser({} as IUser))
         dispatch(AuthActionCreators.setIsAuth(false))
+        dispatch(AuthActionCreators.setError(''));
 
     }
 

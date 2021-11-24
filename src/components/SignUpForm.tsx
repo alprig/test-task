@@ -5,10 +5,12 @@ import {
     Button,
 
 } from 'antd';
+import {RouteNames} from "../router";
+import {useHistory} from "react-router-dom";
 
 const SignUpForm = () => {
 
-
+    const router = useHistory();
 
     const formItemLayout = {
         labelCol: {
@@ -127,9 +129,18 @@ const SignUpForm = () => {
 
 
                 <Form.Item {...tailFormItemLayout}>
-                    <Button type="primary" htmlType="submit">
-                        Register
-                    </Button>
+                    <div className="buttons-wrapper">
+                        <Button
+                            onClick={()=> router.push(RouteNames.LOGIN)}
+                            type="primary"
+                        >
+                            Back to Login
+                        </Button>
+                        <Button type="primary" htmlType="submit">
+                            Register
+                        </Button>
+                    </div>
+
                 </Form.Item>
             </Form>
         </div>
@@ -137,4 +148,3 @@ const SignUpForm = () => {
 };
 
 export default SignUpForm;
-
