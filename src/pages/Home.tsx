@@ -47,7 +47,7 @@ const Home: FC = () => {
             <div className="chart_wrapper">
                 <Line {...config} onReady={(chartInstance) => (chart = chartInstance)} />
             </div>
-            <div className="circle"></div>
+           
 
         </div>
 
